@@ -28,7 +28,7 @@ require("http").get({
             icon[0] = icon[0].substr(5).split(/:before,\.fa-/);
             for (var k = 0; k < icon[0].length; k++) {
                 icon[0][k] = icon[0][k].replace(/-./g, function(x) { return x.substr(1).toUpperCase() });
-                fa += "fa." + icon[0][k] + "=\"\\u" + icon[1] + "\";";
+                fa += "fa" + "[\"" + icon[0][k] + "\"]" + "=\"\\u" + icon[1] + "\";";
             }
             namecount += icon[0].length;
         }
